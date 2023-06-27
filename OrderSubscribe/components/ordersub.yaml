@@ -1,0 +1,14 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: neworderevent
+spec:
+  type: pubsub.azure.servicebus
+  version: v1
+  metadata:
+   - name: connectionString
+     value: "connstr"
+   - name: consumerID
+     value: "omsorder"
+scopes:
+  - ordersubscribe
